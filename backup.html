@@ -1,0 +1,93 @@
+<script>
+  var rank = [];
+   var playerRanks = [];
+   var statsArray = [];
+ $(document).ready(function(){
+    $.getJSON("wzstats.json", function(data){
+      var player_stats = ''; 
+      $.each(data, function(key, value){
+        player_stats += '<tr>';
+        player_stats += '<td id="rankRow'+[key]+'"'+'>'+'</td>';
+        player_stats += '<td>'+value.player+'</td>';
+        player_stats += '<td>'+value.response.br.wins+'</td>';
+        player_stats += '<td>'+value.response.br.kills+'</td>';
+        player_stats += '<td>'+value.response.br.deaths+'</td>';
+        player_stats += '<td>'+value.response.br.kdRatio+'</td>';
+        player_stats += '<td>'+value.response.br.downs+'</td>';
+        player_stats += '<td>'+value.response.br.revives+'</td>';
+        player_stats += '<td>'+value.response.br.gamesPlayed+'</td>';
+        player_stats += '</tr>'; 
+        rank.push(value.response.br.kills);
+        var innerArray = [
+        {
+          'name':value.player, 'wins':value.response.br.wins, 'kills':value.response.br.kills, 'deaths':value.response.br.deaths, 'kD':value.response.br.kdRatio, 'downs':value.response.br.downs, 'revives':value.response.br.revives, 'gamesPlayed':value.response.br.gamesPlayed
+        },
+        ]
+statsArray.push(innerArray);
+      });
+      console.log(statsArray);
+   var sorted = rank.slice().sort(function(a,b){return b-a});
+  var playerRanks = rank.map(function(v){ return sorted.indexOf(v)+1 });  
+$('#statstable').append(player_stats);
+document.getElementById('rankRow0').innerHTML = playerRanks[0];
+document.getElementById('rankRow1').innerHTML = playerRanks[1];
+document.getElementById('rankRow2').innerHTML = playerRanks[2];
+document.getElementById('rankRow3').innerHTML = playerRanks[3];
+document.getElementById('rankRow4').innerHTML = playerRanks[4];
+document.getElementById('rankRow5').innerHTML = playerRanks[5];
+document.getElementById('rankRow6').innerHTML = playerRanks[6];
+document.getElementById('rankRow7').innerHTML = playerRanks[7];
+document.getElementById('rankRow8').innerHTML = playerRanks[8];
+document.getElementById('rankRow9').innerHTML = playerRanks[9];
+document.getElementById('rankRow10').innerHTML = playerRanks[10];
+document.getElementById('rankRow11').innerHTML = playerRanks[11];
+});
+
+
+  });
+
+
+
+
+</script>
+
+<script>
+  var rank = [];
+   var player_stats = [];
+   var statsArray = [];
+ $(document).ready(function(){
+   $.getJSON("wzstats.json", function(data){
+      var player_stats = ''; 
+      $.each(data, function(key, value){
+        rank.push(value.response.br.kills);
+        var innerArray = 
+        {
+          'name':value.player, 'wins':value.response.br.wins, 'kills':value.response.br.kills, 'deaths':value.response.br.deaths, 'kD':value.response.br.kdRatio, 'downs':value.response.br.downs, 'revives':value.response.br.revives, 'gamesPlayed':value.response.br.gamesPlayed
+        };
+
+        statsArray.push(innerArray);
+
+console.log(statsArray);
+   var sorted = rank.slice().sort(function(a,b){return b-a});
+  var playerRanks = rank.map(function(v){ return sorted.indexOf(v)+1 }); 
+buildTable(statsArray)
+function buildTable(arg){
+var table = document.getElementById('myTable');
+
+for (i = 0; i < arg.length; i++){
+  var row = '<tr>'+'<td>'+arg[i].name+'</td>'+'</tr>';
+
+  //*+'<td>'+'${arg[i].wins}+'</td>'+'<td>'+'${arg[i].kills}'+'</td>'+'<td>'+'+'${arg[i].deaths}'+'</td>'+'<td>'+'${arg[i].kD}'+'</td>'+'<td>'+'${arg[i].downs}'+'</td>'+'<td>'+'${arg[i].revives}'+'</td>'+'<td>'+'${arg[i].gamesPlayed}'+'</td>'+'</tr>'//*/
+ table.innerHTML += row
+}
+}
+      });
+ 
+});
+
+
+
+  });
+
+
+</script>

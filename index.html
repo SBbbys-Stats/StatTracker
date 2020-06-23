@@ -1,0 +1,321 @@
+<style>
+#backgroundimage {
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  opacity: .25;
+}
+#headdiv {
+  position: relative;
+  display: flex;
+  flex-direction: column; 
+  max-height: 100%;
+  width: 100%;
+  justify-content: flex-start;
+  z-index: 2;
+}
+
+#body 
+{
+  background-color: #b6c2d6;
+  background-color: #646b6e;
+  background-color: #c0cacf;
+}
+#headerimage 
+{
+  height: 25vw;
+  width: 100%;
+  border: solid;
+  box-shadow: 1px 1px 2px;
+}
+#threetrophies {
+  display: flex;
+  justify-content: space-evenly;
+  height: 21vw;
+  width: 100%;
+}
+#onetrophy {
+ display: flex;
+  justify-content: center;
+  height: 21vw;
+  width: 100%;
+  margin-top: 3vw;
+  margin-bottom: 2vw;
+}
+#flexformatting1 {
+  position: absolute;
+  top: 1.8vw;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#flexformatting2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#nameandav {
+}
+  
+
+#rank1 {
+  color: #a39c6f;
+  font-family: verdana;
+  text-align: center;
+  height: 2vw;
+  width: 2vw;
+  font-size: 2vw;
+  padding: .5vw;
+  border-left: .2vw solid white;
+  border-right: .2vw solid white;
+  border-bottom: .2vw solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  box-shadow: .2vw .2vw grey;
+}
+#trophystats {
+  
+}
+#rankc {
+  color: #a39c6f;
+  font-family: verdana;
+  position: absolute; 
+  text-align: center;
+  height: 4vw;
+  width: 2vw;
+  font-size: 1vw;
+  padding: .5vw;
+  border-bottom: .2vw solid white;
+  border-left: .2vw solid white;
+  border-right: .2vw solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  box-shadow: .2vw .2vw grey;
+}
+#headertextdiv {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#headertext {
+  font-family: verdana;
+  font-size: 2vw;
+  color: white;
+  position: absolute;
+  text-shadow: 1px 1px 1px black;
+}
+#top {
+  text-align: center;
+  font-family: verdana;
+  font-size: 1.5vw;
+  position: relative;
+  top: -1.5vw;
+  left: -10px;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+#boxlogo {
+ 
+}
+#trophy 
+{
+  height: 20vw;
+  width: 15vw;
+  border: .2vw solid white;
+  border-radius: .2vw;
+  box-shadow: .2vw .2vw .2vw .2vw grey;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  outline: .2vw solid white;
+  outline-offset: -2vw;
+  z-index: 3;
+  background-color: #c0cacf;
+  
+}
+
+#trophylogo {
+  position: absolute;
+  top: -2.5vw;
+   max-height: 2vw;
+  width: 2vw;
+  text-align: center;
+  border-top: .2vw solid white;
+  border-left: .2vw solid white;
+  border-right: .2vw solid white;
+  box-shadow: .1vw .1vw 0vw .1vw grey;
+  z-index: 1;
+}
+#statstable {
+  margin: auto;
+  text-align: center;
+  font-family: verdana;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  height: 1000px; 
+   border: 1px solid #a39c6f;
+  border-collapse: collapse;
+  box-shadow: .5px .5px .5px .5px #a39c6f;
+}
+
+
+tr {
+  text-align: center;
+  font-family: verdana;
+  color: #a39c6f;
+ border: 1px solid #a39c6f;
+ font-weight: bold;
+}
+tr:hover {
+  border: 1px solid white;
+  color: #a39c6f;
+  font-weight: bold;
+}
+#toptablerow {
+  font-family: verdana;
+  color: #a39c6f;
+  font-weight: bold;
+  text-shadow: 1px solid black;
+}
+#myTable {
+ height: 1000px; 
+ border: 1px solid black;
+ width: 100%;
+ color: white;
+}
+th {
+  height: 35px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px solid black;
+  color: #a39c6f;
+}
+td { 
+ color: #a39c6f;
+ font-weight: bold;
+}
+tr:nth-child(odd) {background-color: #f2f2f2;}
+tr:hover:nth-child(odd) {border: 1px solid white;}
+  
+</style>
+<html>
+<head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+    </head>
+
+<div id="head">
+  <div id="headdiv">
+    <div id="imagediv">
+  <img src="https://gamespot1.cbsistatic.com/uploads/screen_kubrick/1585/15855271/3673269-3642905-goulag_outside.png"id="headerimage"</img></div>
+    <div id="headertextdiv"><h1 id="headertext"><u>SBBoys </u><u>#Gang</u></h1></div>
+    <p id ="top">Leaderboards</p></div>
+</div>
+<body id="body">
+  <div id="threetrophies">
+  <div id="trophy">
+    <img src="https://i.imgur.com/9WoLRIu.png" id="trophylogo"></img>
+    <div id="flexformatting1">
+    <div id="flexformatting2"><div id="rank1">1</div></div>
+    <div id="nameandav"></div></div>
+  </div>
+ 
+  
+ <div id="trophy">
+    <img src="https://i.imgur.com/9WoLRIu.png" id="trophylogo"></img><div id="flexformatting1"><div id="flexformatting2"><div id="rank1">2</div></div></div>
+  <div id="nameandav"></div>
+ <div id="trophystats"></div>
+  </div>
+ <div id="trophy">
+    <img src="https://i.imgur.com/9WoLRIu.png" id="trophylogo"></img><div id="flexformatting1"><div id="flexformatting2"><div id="rank1">3</div></div></div>
+<div id="nameandav"></div>
+ <div id="trophystats"></div>
+</div>
+</div>
+<div id="onetrophy">
+  <div id="trophy">
+    <img src="https://i.imgur.com/9WoLRIu.png" id="trophylogo"></img><div id="flexformatting1"><div id="flexformatting2"><div id="rankc">C<br>U<br>C<br>K</div></div></div>
+  <div id="nameandav"></div>
+  <div id="trophystats"></div></div></div>
+
+<table id="statstable">
+  <tr>
+    <th>Rank</th>
+    <th>Name</th>
+     <th>Dubs</th>
+    <th>Kills</th>
+    <th>Deaths</th>
+    <th>KD Ratio</th>
+    <th>Downs</th>
+    <th>Revives</th>
+    <th>Matches Played</th>
+    </tr>
+    
+</table>
+<button onclick="rankFunction()">Try it</button>
+</body>
+</html>
+<script>
+  var rank = [];
+   var playerRanks = [];
+   var statsArray = [];
+ $(document).ready(function(){
+    $.getJSON("wzstats.json", function(data){
+      var player_stats = ''; 
+      $.each(data, function(key, value){
+        player_stats += '<tr>';
+        player_stats += '<td id="rankRow'+[key]+'"'+'>'+'</td>';
+        player_stats += '<td>'+value.player+'</td>';
+        player_stats += '<td>'+value.response.br.wins+'</td>';
+        player_stats += '<td>'+value.response.br.kills+'</td>';
+        player_stats += '<td>'+value.response.br.deaths+'</td>';
+        player_stats += '<td>'+value.response.br.kdRatio+'</td>';
+        player_stats += '<td>'+value.response.br.downs+'</td>';
+        player_stats += '<td>'+value.response.br.revives+'</td>';
+        player_stats += '<td>'+value.response.br.gamesPlayed+'</td>';
+        player_stats += '</tr>'; 
+        rank.push(value.response.br.kills);
+        var innerArray = [
+        {
+          'name':value.player, 'wins':value.response.br.wins, 'kills':value.response.br.kills, 'deaths':value.response.br.deaths, 'kD':value.response.br.kdRatio, 'downs':value.response.br.downs, 'revives':value.response.br.revives, 'gamesPlayed':value.response.br.gamesPlayed
+        },
+        ]
+statsArray.push(innerArray);
+      });
+      console.log(statsArray);
+   var sorted = rank.slice().sort(function(a,b){return b-a});
+  var playerRanks = rank.map(function(v){ return sorted.indexOf(v)+1 });  
+$('#statstable').append(player_stats);
+document.getElementById('rankRow0').innerHTML = playerRanks[0];
+document.getElementById('rankRow1').innerHTML = playerRanks[1];
+document.getElementById('rankRow2').innerHTML = playerRanks[2];
+document.getElementById('rankRow3').innerHTML = playerRanks[3];
+document.getElementById('rankRow4').innerHTML = playerRanks[4];
+document.getElementById('rankRow5').innerHTML = playerRanks[5];
+document.getElementById('rankRow6').innerHTML = playerRanks[6];
+document.getElementById('rankRow7').innerHTML = playerRanks[7];
+document.getElementById('rankRow8').innerHTML = playerRanks[8];
+document.getElementById('rankRow9').innerHTML = playerRanks[9];
+document.getElementById('rankRow10').innerHTML = playerRanks[10];
+document.getElementById('rankRow11').innerHTML = playerRanks[11];
+});
+
+
+  });
+
+
+
+
+</script>
