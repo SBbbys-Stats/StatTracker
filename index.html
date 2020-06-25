@@ -58,9 +58,26 @@
   justify-content: center;
 }
 #nameandav {
+ color: #a39c6f;
+  padding: 1vw;
+  text-decoration: underline;
 }
-  
 
+#nameandav2 {
+  color: #a39c6f;
+  padding: 1vw;
+   text-decoration: underline;
+}
+#nameandav3 {
+  color: #a39c6f;
+  padding: 1vw;
+   text-decoration: underline;
+}
+#nameandavc {
+  color: #a39c6f;
+  padding: 1vw;
+   text-decoration: underline;
+}
 #rank1 {
   color: #a39c6f;
   font-family: verdana;
@@ -83,7 +100,6 @@
 #rankc {
   color: #a39c6f;
   font-family: verdana;
-  position: absolute; 
   text-align: center;
   height: 4vw;
   width: 2vw;
@@ -163,7 +179,7 @@
   font-family: verdana;
   font-weight: bold;
   color: white;
-  width: 100%;
+  width: 75%;
   height: 1000px; 
    border: 1px solid #a39c6f;
   border-collapse: collapse;
@@ -171,14 +187,14 @@
 }
 
 
-tr {
+#statstable tr {
   text-align: center;
   font-family: verdana;
   color: #a39c6f;
  border: 1px solid #a39c6f;
  font-weight: bold;
 }
-tr:hover {
+#statstable tr:hover {
   border: 1px solid white;
   color: #a39c6f;
   font-weight: bold;
@@ -195,25 +211,42 @@ tr:hover {
  width: 100%;
  color: white;
 }
-th {
+#statstable th {
   height: 35px;
   text-align: center;
   font-weight: bold;
   text-shadow: 1px solid black;
   color: #a39c6f;
 }
-td { 
+#statstable td { 
  color: #a39c6f;
  font-weight: bold;
 }
-tr:nth-child(odd) {background-color: #f2f2f2;}
-tr:hover:nth-child(odd) {border: 1px solid white;}
-  
+
+#trophytable 
+{
+  width: 8vw;
+  color: white;
+  font-family: verdana;
+  font-size: .75vw;
+  margin-left: 2.1vw;
+}
+#statstable tr:nth-child(odd) {background-color: #f2f2f2;}
+#statstable tr:hover:nth-child(odd) {border: 1px solid white;}
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
+  }
 </style>
 <html>
 <head>
+  <img src="https://images.pexels.com/photos/82256/pexels-photo-82256.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" id="backgroundimage">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  
+<script src="sorttable.js"></script>
+
     </head>
 
 <div id="head">
@@ -229,29 +262,67 @@ tr:hover:nth-child(odd) {border: 1px solid white;}
     <img src="https://i.imgur.com/9WoLRIu.png" id="trophylogo"></img>
     <div id="flexformatting1">
     <div id="flexformatting2"><div id="rank1">1</div></div>
-    <div id="nameandav"></div></div>
+    <div id="nameandav"></div>
+    <table id="trophytable">
+    <tr><td>Dubs:</td><td id="1dubs"></td></tr>
+      <tr><td>Kills:</td><td id="1kills"></td></tr>
+        <tr><td>Deaths:</td><td id="1deaths"></td></tr>
+          <tr><td>KD:</td><td id="1kD"></td></tr>
+            <tr><td>GP:</td><td id="1gp"></td></tr>
+   </table></div>
+  
   </div>
  
   
  <div id="trophy">
-    <img src="https://i.imgur.com/9WoLRIu.png" id="trophylogo"></img><div id="flexformatting1"><div id="flexformatting2"><div id="rank1">2</div></div></div>
-  <div id="nameandav"></div>
- <div id="trophystats"></div>
+    <img src="https://i.imgur.com/9WoLRIu.png" id="trophylogo"></img>
+    <div id="flexformatting1">
+    <div id="flexformatting2"><div id="rank1">2</div></div>
+    <div id="nameandav2"></div>
+    <table id="trophytable">
+    <tr><td>Dubs:</td><td id="2dubs"></td></tr>
+      <tr><td>Kills:</td><td id="2kills"></td></tr>
+        <tr><td>Deaths:</td><td id="2deaths"></td></tr>
+          <tr><td>KD:</td><td id="2kD"></td></tr>
+            <tr><td>GP:</td><td id="2gp"></td></tr>
+   </table>
   </div>
+</div>
  <div id="trophy">
-    <img src="https://i.imgur.com/9WoLRIu.png" id="trophylogo"></img><div id="flexformatting1"><div id="flexformatting2"><div id="rank1">3</div></div></div>
-<div id="nameandav"></div>
- <div id="trophystats"></div>
+    <img src="https://i.imgur.com/9WoLRIu.png" id="trophylogo"></img>
+    <div id="flexformatting1">
+    <div id="flexformatting2"><div id="rank1">3</div></div>
+    <div id="nameandav3"></div>
+    <table id="trophytable">
+    <tr><td>Dubs:</td><td id="3dubs"></td></tr>
+      <tr><td>Kills:</td><td id="3kills"></td></tr>
+        <tr><td>Deaths:</td><td id="3deaths"></td></tr>
+          <tr><td>KD:</td><td id="3kD"></td></tr>
+            <tr><td>GP:</td><td id="3gp"></td></tr>
+   </table>
+  </div>
 </div>
 </div>
 <div id="onetrophy">
   <div id="trophy">
-    <img src="https://i.imgur.com/9WoLRIu.png" id="trophylogo"></img><div id="flexformatting1"><div id="flexformatting2"><div id="rankc">C<br>U<br>C<br>K</div></div></div>
-  <div id="nameandav"></div>
-  <div id="trophystats"></div></div></div>
+    <img src="https://i.imgur.com/9WoLRIu.png" id="trophylogo"></img>
+    <div id="flexformatting1">
+      <div id="flexformatting2"><div id="rankc">C<br>U<br>C<br>K</div></div>
+  <div id="nameandavc"></div>
+  <table id="trophytable">
+    <tr><td>Dubs:</td><td id="cdubs"></td></tr>
+      <tr><td>Kills:</td><td id="ckills"></td></tr>
+        <tr><td>Deaths:</td><td id="cdeaths"></td></tr>
+          <tr><td>KD:</td><td id="ckD"></td></tr>
+            <tr><td>GP:</td><td id="cgp"></td></tr>
+   </table>
+  </div>
+</div>
+</div>
 
 <table id="statstable">
-  <tr>
+  <thead>
+    <tr>
     <th>Rank</th>
     <th>Name</th>
      <th>Dubs</th>
@@ -261,43 +332,99 @@ tr:hover:nth-child(odd) {border: 1px solid white;}
     <th>Downs</th>
     <th>Revives</th>
     <th>Matches Played</th>
-    </tr>
-    
+  </tr>
+    </thead>
+    <tbody>
+    </tbody>
 </table>
-<button onclick="rankFunction()">Try it</button>
+
 </body>
 </html>
 <script>
+  var trackedArray = [];
   var rank = [];
+  var trackedPlayer = [];
+  var trackedWins = [];
+  var trackedKills = [];
+  var trackedDeaths =[];
+  var trackedkD = [];
+  var trackedDowns = [];
+  var trackedRevives = [];
+  var trackedgamesPlayed = [];
    var playerRanks = [];
    var statsArray = [];
+     var trackedArray2 = [];
+  var rank2 = [];
+  var trackedPlayer2 = [];
+  var trackedWins2 = [];
+  var trackedKills2 = [];
+  var trackedDeaths2 =[];
+  var trackedkD2 = [];
+  var trackedDowns2 = [];
+  var trackedRevives2 = [];
+  var trackedgamesPlayed2 = [];
+   var playerRanks2 = [];
+   var statsArray2 = [];
+   var sortedArray2 = [];
+   var sortedArray = [];
  $(document).ready(function(){
-    $.getJSON("wzstats.json", function(data){
+    $.getJSON("wzstats1.json", function(data){
       var player_stats = ''; 
       $.each(data, function(key, value){
-        player_stats += '<tr>';
-        player_stats += '<td id="rankRow'+[key]+'"'+'>'+'</td>';
-        player_stats += '<td>'+value.player+'</td>';
-        player_stats += '<td>'+value.response.br.wins+'</td>';
-        player_stats += '<td>'+value.response.br.kills+'</td>';
-        player_stats += '<td>'+value.response.br.deaths+'</td>';
-        player_stats += '<td>'+value.response.br.kdRatio+'</td>';
-        player_stats += '<td>'+value.response.br.downs+'</td>';
-        player_stats += '<td>'+value.response.br.revives+'</td>';
-        player_stats += '<td>'+value.response.br.gamesPlayed+'</td>';
-        player_stats += '</tr>'; 
         rank.push(value.response.br.kills);
-        var innerArray = [
-        {
-          'name':value.player, 'wins':value.response.br.wins, 'kills':value.response.br.kills, 'deaths':value.response.br.deaths, 'kD':value.response.br.kdRatio, 'downs':value.response.br.downs, 'revives':value.response.br.revives, 'gamesPlayed':value.response.br.gamesPlayed
-        },
-        ]
-statsArray.push(innerArray);
+        trackedPlayer.push(value.player);
+        trackedWins.push(value.response.br.wins);
+        trackedKills.push(value.response.br.kills);
+        trackedDeaths.push(value.response.br.deaths);
+        trackedkD.push(value.response.br.kdRatio);
+        trackedDowns.push(value.response.br.downs);
+        trackedRevives.push(value.response.br.revives);
+        trackedgamesPlayed.push(value.response.br.gamesPlayed);
       });
-      console.log(statsArray);
-   var sorted = rank.slice().sort(function(a,b){return b-a});
-  var playerRanks = rank.map(function(v){ return sorted.indexOf(v)+1 });  
-$('#statstable').append(player_stats);
+    
+ //var sorted = rank.slice().sort(function(a,b){return b-a});
+ //var playerRanks = rank.map(function(v){ return sorted.indexOf(v)+1 });  
+ var sorted = rank.slice().sort(function(a,b){return b-a});
+var playerRanks = rank.map(function(v){ return sorted.indexOf(v)+1 }); 
+trackedArray.push(trackedPlayer);
+trackedArray.push(trackedWins);
+trackedArray.push(trackedKills);
+trackedArray.push(trackedDeaths);
+trackedArray.push(trackedkD);
+trackedArray.push(trackedDowns);
+trackedArray.push(trackedRevives);
+trackedArray.push(trackedgamesPlayed);
+trackedArray.push(playerRanks);
+
+for (i = 0; i < trackedPlayer.length; i++) {
+
+sortedArray.push(trackedArray.map(function(x) {
+  return x[i];
+}));
+}
+
+sortedArray.sort(function(a, b) {
+  return a[8]-b[8]
+});
+  
+});
+
+ 
+/*var sortedArray = [];
+for (i = 0; i < trackedPlayer.length; i++) {
+
+sortedArray.push(trackedArray.map(function(x) {
+  return x[i];
+}));
+}*/
+
+/*sortedArray.sort(function(a, b) {
+  return a[8]-b[8]
+});
+  console.log(sortedArray);*/
+
+
+/*$('#statstable').append(player_stats);
 document.getElementById('rankRow0').innerHTML = playerRanks[0];
 document.getElementById('rankRow1').innerHTML = playerRanks[1];
 document.getElementById('rankRow2').innerHTML = playerRanks[2];
@@ -310,11 +437,108 @@ document.getElementById('rankRow8').innerHTML = playerRanks[8];
 document.getElementById('rankRow9').innerHTML = playerRanks[9];
 document.getElementById('rankRow10').innerHTML = playerRanks[10];
 document.getElementById('rankRow11').innerHTML = playerRanks[11];
+document.getElementById('nameandav').innerHTML = sortedArray[0][0];
+document.getElementById('1dubs').innerHTML = sortedArray[0][1];
+document.getElementById('1kills').innerHTML = sortedArray[0][2];
+document.getElementById('1deaths').innerHTML = sortedArray[0][3];
+document.getElementById('1kD').innerHTML = sortedArray[0][4];
+document.getElementById('1gp').innerHTML = sortedArray[0][5];
+document.getElementById('nameandav2').innerHTML = sortedArray[1][0];
+document.getElementById('2dubs').innerHTML = sortedArray[1][1];
+document.getElementById('2kills').innerHTML = sortedArray[1][2];
+document.getElementById('2deaths').innerHTML = sortedArray[1][3];
+document.getElementById('2kD').innerHTML = sortedArray[1][4];
+document.getElementById('2gp').innerHTML = sortedArray[1][5];
+document.getElementById('nameandav3').innerHTML = sortedArray[2][0];
+document.getElementById('3dubs').innerHTML = sortedArray[2][1];
+document.getElementById('3kills').innerHTML = sortedArray[2][2];
+document.getElementById('3deaths').innerHTML = sortedArray[2][3];
+document.getElementById('3kD').innerHTML = sortedArray[2][4];
+document.getElementById('3gp').innerHTML = sortedArray[2][5];
+document.getElementById('nameandavc').innerHTML = sortedArray[11][0];
+document.getElementById('cdubs').innerHTML = sortedArray[11][1];
+document.getElementById('ckills').innerHTML = sortedArray[11][2];
+document.getElementById('cdeaths').innerHTML = sortedArray[11][3];
+document.getElementById('ckD').innerHTML = sortedArray[11][4];
+document.getElementById('cgp').innerHTML = sortedArray[11][5];
+
+});
+*/
+ $.getJSON("wzstats2.json", function(data){
+      var player_stats2 = ''; 
+      $.each(data, function(key, value){
+        rank2.push(value.response.br.kills);
+        trackedPlayer2.push(value.player);
+        trackedWins2.push(value.response.br.wins);
+        trackedKills2.push(value.response.br.kills);
+        trackedDeaths2.push(value.response.br.deaths);
+        trackedkD2.push(value.response.br.kdRatio);
+        trackedDowns2.push(value.response.br.downs);
+        trackedRevives2.push(value.response.br.revives);
+        trackedgamesPlayed2.push(value.response.br.gamesPlayed);
+      });
+var sorted2 = rank2.slice().sort(function(a,b){return b-a});
+ var playerRanks2 = rank2.map(function(v){ return sorted2.indexOf(v)+1 }); 
+trackedArray2.push(trackedPlayer2);
+trackedArray2.push(trackedWins2);
+trackedArray2.push(trackedKills2);
+trackedArray2.push(trackedDeaths2);
+trackedArray2.push(trackedkD2);
+trackedArray2.push(trackedDowns2);
+trackedArray2.push(trackedRevives2);
+trackedArray2.push(trackedgamesPlayed2);
+trackedArray2.push(playerRanks2);
+
+for (i = 0; i < trackedPlayer2.length; i++) {
+
+sortedArray2.push(trackedArray2.map(function(x) {
+  return x[i];
+}));
+}
+
+sortedArray2.sort(function(a, b) {
+  return a[8]-b[8]
+});
+  
+return sortedArray2;
+  });
+
+ $.when($.getJSON("wzstats1.json"), $.getJSON("wzstats2.json")).done(function(a, b) {
+var test1 = [
+[2, 3, 4, 5],
+[6, 4, 1, 2]
+];
+var test2 = [
+[4, 10, 0, 2],
+[7, 2, 0, 1]
+];
+
+for (i = 0; i < test2.length; i++) {
+
+  for (j = 0; j < test2[0].length; j++) {
+    var test3 = [];
+    test3[i][j] = test2[i][j] - test1[i][j];
+    var test4 = test3.push(test3[i][j]);
+    test3.push(test4);
+  }
+  }
+console.log(test3);
 });
 
 
-  });
 
+});
+
+
+$("table#statstable tr").each(function() {
+    var arrayOfThisRow = [];
+    var tableData = $(this).find('td');
+    if (tableData.length > 0) {
+        tableData.each(function() { arrayOfThisRow.push($(this).text()); });
+        myTableArray.push(arrayOfThisRow);
+    }
+});
+//$("#statstable").addSortWidget()
 
 
 
